@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7F2F84F52348278F00F430AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F84F42348278F00F430AE /* main.swift */; };
+		7F2F84FC2349FE2100F430AE /* findAverageOfSubArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F84FB2349FE2100F430AE /* findAverageOfSubArray.swift */; };
+		7F9530FB234A1337004E278A /* maxSubArrayOfSizeK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9530FA234A1337004E278A /* maxSubArrayOfSizeK.swift */; };
+		7F9530FD234A177C004E278A /* smallestSubArrayWithGivenSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9530FC234A177C004E278A /* smallestSubArrayWithGivenSum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		7F2F84F12348278F00F430AE /* CodingTestSwift */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CodingTestSwift; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2F84F42348278F00F430AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7F2F84FB2349FE2100F430AE /* findAverageOfSubArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findAverageOfSubArray.swift; sourceTree = "<group>"; };
+		7F9530FA234A1337004E278A /* maxSubArrayOfSizeK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maxSubArrayOfSizeK.swift; sourceTree = "<group>"; };
+		7F9530FC234A177C004E278A /* smallestSubArrayWithGivenSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smallestSubArrayWithGivenSum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +63,20 @@
 		7F2F84F32348278F00F430AE /* CodingTestSwift */ = {
 			isa = PBXGroup;
 			children = (
+				7F2F84FD2349FF2000F430AE /* SlidingWindow */,
 				7F2F84F42348278F00F430AE /* main.swift */,
 			);
 			path = CodingTestSwift;
+			sourceTree = "<group>";
+		};
+		7F2F84FD2349FF2000F430AE /* SlidingWindow */ = {
+			isa = PBXGroup;
+			children = (
+				7F2F84FB2349FE2100F430AE /* findAverageOfSubArray.swift */,
+				7F9530FA234A1337004E278A /* maxSubArrayOfSizeK.swift */,
+				7F9530FC234A177C004E278A /* smallestSubArrayWithGivenSum.swift */,
+			);
+			path = SlidingWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9530FB234A1337004E278A /* maxSubArrayOfSizeK.swift in Sources */,
+				7F9530FD234A177C004E278A /* smallestSubArrayWithGivenSum.swift in Sources */,
+				7F2F84FC2349FE2100F430AE /* findAverageOfSubArray.swift in Sources */,
 				7F2F84F52348278F00F430AE /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
