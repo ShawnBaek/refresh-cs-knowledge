@@ -8,13 +8,14 @@
 
 import Foundation
 
-func smallestSubArrayWithGivenSum(s: Int, arr: [Int]) -> Int {
+@discardableResult func smallestSubArrayWithGivenSum(s: Int, arr: [Int]) -> Int {
     //There is no fixed length
     var start = 0
     var minLength = Int.max
     var sum = 0
     for end in stride(from: 0, to: arr.count, by: 1) {
         sum += arr[end]
+        //loop processes each element only once
         while sum >= s {
             minLength = min(minLength, end - start + 1)
             sum -= arr[start]

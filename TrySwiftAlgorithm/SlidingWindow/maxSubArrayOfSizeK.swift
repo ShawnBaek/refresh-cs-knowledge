@@ -9,7 +9,7 @@
 import Foundation
 import AppKit
 
-func maxSubArrayOfSizeK(k: Int, arr: [Double]) -> Double {
+@discardableResult func maxSubArrayOfSizeK(k: Int, arr: [Double]) -> Double {
     var maxSum = 0.0
     var start = 0
     var sum = 0.0
