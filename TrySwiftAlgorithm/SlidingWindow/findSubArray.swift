@@ -76,31 +76,66 @@ func findMaximumOfSubArray(input: [Int], k: Int) -> Double {
     return Double(maxSum)
 }
 
+func findSmallestOfSubArrayGivenSum(input: [Int], given sum: Int) -> Double {
+    var windowStartIndex = 0
+    var windowSum = 0
+    var minSum = 0
+    for i in stride(from: 0, to: input.count, by: 1) {
+        windowSum += input[i]
+        if i >= sum - 1 {
+            minSum = min(minSum, windowSum)
+            windowSum -= input[windowStartIndex]
+            windowStartIndex += 1
+        }
+    }
+    return Double(minSum)
+}
 
-func runSlidingWindow(method: SlidingWindow, input: [Int], k: Int) {
-    var result: [Double] = []
+
+func runSlidingWindow(method: SlidingWindow, input: [Int], k: Int? = nil, given sum: Int? = nil, expect result: [Double]? = nil) {
+    var resultOfChallenges: [Double] = []
     switch method {
     case let .average(solvingProblem):
         if solvingProblem == .bruteForce {
-            result = findAverageOfSubArrayBruteForce(input: input, k: k, method: .average(using: solvingProblem))
+            resultOfChallenges = findAverageOfSubArrayBruteForce(input: input, k: k!, method: .average(using: solvingProblem))
         }
         else {
-            result = findAverageOfSubArrayOptimazation(input: input, k: k, method: .average(using: solvingProblem))
+            resultOfChallenges = findAverageOfSubArrayOptimazation(input: input, k: k!, method: .average(using: solvingProblem))
         }
     case .maximum:
-        result.append(findMaximumOfSubArray(input: input, k: k))
+        resultOfChallenges.append(findMaximumOfSubArray(input: input, k: k!))
     case .minimum:
-        print("")
+        resultOfChallenges.append(findSmallestOfSubArrayGivenSum(input: input, given: sum!))
     }
+    let funcInfo = PrettyOutput.getFunc(#function)
     let resultInformation =
     #"""
     --- Function ---
-    🏀 \#(#function) to get \#(method.getMethod())
-    --- Input ---
-    👉 Input: \#(input)
-    👉 Size K: \#(k)
-    --- Output ---
-    🔥 Result: \#(result)
+    |🏀 \#(funcInfo!.name) to get \#(method.getMethod())
+    |
+    --- Input ------
+    |👉 Input: \#(input)
+    |👉 \#(k == nil ? "Given Sum: \(sum!)" : "Size K: \(k!)")
+    |
+    --- Output -----
+    |🔥 Result: \#(resultOfChallenges)
     """#
-    print(resultInformation)
+    var testResult: String?
+    if result != nil {
+        testResult =
+    #"""
+    |
+    --- Test -------
+    \#(resultOfChallenges == result ?
+    "|😁 Success: Expected Result: \(result!), Result: \(resultOfChallenges)" :
+    "|😭 Failed: Expected Result: \(result!), Result: \(resultOfChallenges)")
+    ----------------
+    """#
+    }
+    if let testResult = testResult {
+        print("\(resultInformation)\n\(testResult)")
+    }
+    else {
+        print("\(resultInformation)\n----------------")
+    }
 }
