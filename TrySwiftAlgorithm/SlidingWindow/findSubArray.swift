@@ -79,16 +79,19 @@ func findMaximumOfSubArray(input: [Int], k: Int) -> Double {
 func findSmallestOfSubArrayGivenSum(input: [Int], given sum: Int) -> Double {
     var windowStartIndex = 0
     var windowSum = 0
-    var minSum = 0
+    var minCount = Int.max
     for i in stride(from: 0, to: input.count, by: 1) {
         windowSum += input[i]
-        if i >= sum - 1 {
-            minSum = min(minSum, windowSum)
+        while windowSum >= sum {
+            minCount = min(minCount, i - windowStartIndex + 1)
             windowSum -= input[windowStartIndex]
             windowStartIndex += 1
         }
     }
-    return Double(minSum)
+    if minCount == Int.max {
+        return 0.0
+    }
+    return Double(minCount)
 }
 
 
