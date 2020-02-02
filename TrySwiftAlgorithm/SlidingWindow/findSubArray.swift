@@ -84,6 +84,7 @@ func findSmallestOfSubArrayGivenSum(input: [Int], given sum: Int) -> Double {
         windowSum += input[i]
         while windowSum >= sum {
             minCount = min(minCount, i - windowStartIndex + 1)
+            //Shrink SubArray until windowSum < given sum
             windowSum -= input[windowStartIndex]
             windowStartIndex += 1
         }
@@ -93,7 +94,6 @@ func findSmallestOfSubArrayGivenSum(input: [Int], given sum: Int) -> Double {
     }
     return Double(minCount)
 }
-
 
 func runSlidingWindow(method: SlidingWindow, input: [Int], k: Int? = nil, given sum: Int? = nil, expect result: [Double]? = nil) {
     var resultOfChallenges: [Double] = []

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F2AF31023E734EE001F3366 /* longestSubArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2AF30F23E734EE001F3366 /* longestSubArray.swift */; };
 		7F2F84F52348278F00F430AE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F84F42348278F00F430AE /* main.swift */; };
 		7F2F84FC2349FE2100F430AE /* findSubArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F84FB2349FE2100F430AE /* findSubArray.swift */; };
 		7F6B2C0123DF38CB00F1F015 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2BFF23DF38CB00F1F015 /* Fibonacci.swift */; };
 		7F6B2C0223DF38CB00F1F015 /* 01Knapsack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2C0023DF38CB00F1F015 /* 01Knapsack.swift */; };
 		7F6B2C0423E59D5600F1F015 /* PrettyOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2C0323E59D5600F1F015 /* PrettyOutput.swift */; };
-		7F9530FD234A177C004E278A /* smallestSubArrayWithGivenSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9530FC234A177C004E278A /* smallestSubArrayWithGivenSum.swift */; };
 		7F9530FF234A2274004E278A /* longestSubStringWithKDistinct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9530FE234A2274004E278A /* longestSubStringWithKDistinct.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,13 +29,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7F2AF30F23E734EE001F3366 /* longestSubArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = longestSubArray.swift; sourceTree = "<group>"; };
 		7F2F84F12348278F00F430AE /* TrySwiftAlgorithm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TrySwiftAlgorithm; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2F84F42348278F00F430AE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		7F2F84FB2349FE2100F430AE /* findSubArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = findSubArray.swift; sourceTree = "<group>"; };
 		7F6B2BFF23DF38CB00F1F015 /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		7F6B2C0023DF38CB00F1F015 /* 01Knapsack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 01Knapsack.swift; sourceTree = "<group>"; };
 		7F6B2C0323E59D5600F1F015 /* PrettyOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyOutput.swift; sourceTree = "<group>"; };
-		7F9530FC234A177C004E278A /* smallestSubArrayWithGivenSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smallestSubArrayWithGivenSum.swift; sourceTree = "<group>"; };
 		7F9530FE234A2274004E278A /* longestSubStringWithKDistinct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = longestSubStringWithKDistinct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				7F2F84FB2349FE2100F430AE /* findSubArray.swift */,
-				7F9530FC234A177C004E278A /* smallestSubArrayWithGivenSum.swift */,
 				7F9530FE234A2274004E278A /* longestSubStringWithKDistinct.swift */,
+				7F2AF30F23E734EE001F3366 /* longestSubArray.swift */,
 			);
 			path = SlidingWindow;
 			sourceTree = "<group>";
@@ -164,8 +164,8 @@
 			files = (
 				7F9530FF234A2274004E278A /* longestSubStringWithKDistinct.swift in Sources */,
 				7F6B2C0123DF38CB00F1F015 /* Fibonacci.swift in Sources */,
+				7F2AF31023E734EE001F3366 /* longestSubArray.swift in Sources */,
 				7F6B2C0223DF38CB00F1F015 /* 01Knapsack.swift in Sources */,
-				7F9530FD234A177C004E278A /* smallestSubArrayWithGivenSum.swift in Sources */,
 				7F6B2C0423E59D5600F1F015 /* PrettyOutput.swift in Sources */,
 				7F2F84FC2349FE2100F430AE /* findSubArray.swift in Sources */,
 				7F2F84F52348278F00F430AE /* main.swift in Sources */,
