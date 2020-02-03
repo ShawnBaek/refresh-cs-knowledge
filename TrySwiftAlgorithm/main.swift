@@ -45,10 +45,6 @@ func runSlidingWindowPatterns() {
     printTimeElapsedWhenRunningCode {
         runSlidingWindow(method: .minimum, input: [2, 1, 5, 1, 3, 2], given: 3)
     }
-    
-    longestSubStringWithKDistinct(str: "araaci", k: 2) // 4
-    longestSubStringWithKDistinct(str: "araaci", k: 1) // 2
-    longestSubStringWithKDistinct(str: "cbbebi", k: 3) // 5
 }
 runSlidingWindowPatterns()
 
@@ -63,4 +59,8 @@ printTimeElapsedWhenRunningCode {
 
 printTimeElapsedWhenRunningCode {
     longestCharacter(input: "cbbebi", distinct: 3, expect: 5)
+}
+
+printTimeElapsedWhenRunningCode {
+    fruitIntoBasket(input: ["a", "b", "c", "a", "c"])
 }
