@@ -64,3 +64,23 @@ printTimeElapsedWhenRunningCode {
 printTimeElapsedWhenRunningCode {
     fruitIntoBasket(input: ["a", "b", "c", "a", "c"])
 }
+
+printTimeElapsedWhenRunningCode {
+    longestSubStringNoRepeatingCharacterUsingCounter(input: "abccde")
+    longestSubStringNoRepeatingCharacterUsingCounter(input: "abbbb")
+    longestSubStringNoRepeatingCharacterUsingCounter(input: "abccde")
+    
+}
+
+printTimeElapsedWhenRunningCode {
+    longestSubStringNoRepeatingCharacterUsingIndex(input: "abccde")
+    longestSubStringNoRepeatingCharacterUsingIndex(input: "abbbb")
+    longestSubStringNoRepeatingCharacterUsingIndex(input: "abccde")
+    
+}
+
+printTimeElapsedWhenRunningCode {
+    longestSubStringWithSameLetterAfterReplace(input: "aabccbb", k: 2)
+}
+
+

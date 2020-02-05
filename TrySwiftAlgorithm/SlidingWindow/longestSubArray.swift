@@ -94,3 +94,65 @@ func fruitIntoBasket(input: [String]) -> Int {
     print("output: \(maximumNumberOfFruits)")
     return maximumNumberOfFruits
 }
+
+func longestSubStringNoRepeatingCharacterUsingCounter(input: String) -> Int {
+    var windowStart = 0
+    var frequencyMap: [String: Int] = [:]
+    var longestSubarray = 0
+    
+    for (windowEnd, character) in input.enumerated() {
+        if frequencyMap[character.description] == nil {
+            frequencyMap[character.description] = 0
+        }
+        frequencyMap[character.description]! += 1
+        if frequencyMap[character.description]! > 1 {
+            frequencyMap[character.description]! -= 1
+            if frequencyMap[character.description]! == 0 {
+                frequencyMap.removeValue(forKey: character.description)
+            }
+            //shrink window -> update windowStart
+            windowStart = windowEnd
+        }
+        longestSubarray = max(longestSubarray, windowEnd - windowStart + 1)
+    }
+    print("longest Subarray Using Counter: \(longestSubarray)")
+    return 0
+}
+
+func longestSubStringNoRepeatingCharacterUsingIndex(input: String) -> Int {
+    var windowStart = 0
+    var frequencyMap: [String: Int] = [:]
+    var longestSubarray = 0
+    for (windowEnd, character) in input.enumerated() {
+        if frequencyMap[character.description] != nil {
+            windowStart = max(windowStart, frequencyMap[character.description]! + 1)
+        }
+        frequencyMap[character.description] = windowEnd
+        //update longest subarray
+        longestSubarray = max(longestSubarray, windowEnd - windowStart + 1)
+    }
+    print("longest Subarray using Index: \(longestSubarray)")
+    return 0
+}
+
+//Input: aabccbb -> c with b -> bbbbb
+func longestSubStringWithSameLetterAfterReplace(input: String, k: Int) -> Int {
+    var windowStart = 0
+    var maxRepeatLetterCount = 0
+    var maxLength = 0
+    var frequencyMap: [String: Int] = [:]
+    for (windowEnd, character) in input.enumerated() {
+        if frequencyMap[character.description] == nil {
+            frequencyMap[character.description] = 0
+        }
+        frequencyMap[character.description]! += 1
+        maxRepeatLetterCount = max(maxRepeatLetterCount, frequencyMap[character.description]!)
+        if (windowEnd - windowStart + 1 - maxRepeatLetterCount) > k {
+            let windowStartIndex = input.index(input.startIndex, offsetBy: windowStart)
+            frequencyMap[input[windowStartIndex].description]! -= 1
+            windowStart += 1
+        }
+        maxLength = max(maxLength, windowEnd - windowStart + 1)
+    }
+    return maxLength
+}
