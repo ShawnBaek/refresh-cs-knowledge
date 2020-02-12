@@ -156,3 +156,53 @@ func longestSubStringWithSameLetterAfterReplace(input: String, k: Int) -> Int {
     }
     return maxLength
 }
+
+func longestSubStringWithOneAfterReplace(input: [Int], k: Int) -> Int {
+    var windowStart = 0
+    var maxLength = 0
+    var frequencyMap: [Int: Int] = [:]
+    
+    for windowEnd in stride(from: 0, to: input.count, by: 1) {
+        let digit = input[windowEnd]
+        if frequencyMap[digit] == nil {
+            frequencyMap[digit] = 0
+        }
+        frequencyMap[digit]! += 1
+        while (frequencyMap[0]! > k) {
+            let startDigit = input[windowStart]
+            frequencyMap[startDigit]! -= 1
+            if frequencyMap[startDigit] == 0 {
+                frequencyMap.removeValue(forKey: startDigit)
+            }
+            windowStart += 1
+        }
+        maxLength = max(maxLength, windowEnd - windowStart + 1)
+    }
+    print("Longest SubString 1's is \(maxLength)")
+    return maxLength
+}
+
+func longestSubStringWithOneAfterReplaceOptimization(input: [Int], k: Int) -> Int {
+    var windowStart = 0
+    var maxLength = 0
+    var maxOneCounts = 0
+    
+    for windowEnd in stride(from: 0, to: input.count, by: 1) {
+        let digit = input[windowEnd]
+        if digit == 1 {
+            maxOneCounts += 1
+        }
+        
+        //check 0's count > k
+        if windowEnd - windowStart + 1 - maxOneCounts > k {
+            //shrink the window
+            if input[windowStart] == 1 {
+                maxOneCounts -= 1
+            }
+            windowStart += 1
+        }
+        maxLength = max(maxLength, windowEnd - windowStart + 1)
+    }
+    print("longestSubStringWithOneAfterReplaceOptimization 1's is \(maxLength)")
+    return maxLength
+}

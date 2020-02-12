@@ -84,3 +84,47 @@ printTimeElapsedWhenRunningCode {
 }
 
 
+printTimeElapsedWhenRunningCode {
+    print(longestSubStringWithOneAfterReplaceOptimization(input: [0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1], k: 2))
+}
+
+printTimeElapsedWhenRunningCode {
+    print(longestSubStringWithOneAfterReplaceOptimization(input: [0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1], k: 3))
+}
+
+printTimeElapsedWhenRunningCode {
+    pairWithTargetSum(input: [1, 2, 3, 4, 6], target: 6)
+}
+
+printTimeElapsedWhenRunningCode {
+    pairWithTargetSum(input: [2, 5, 9, 11], target: 11)
+}
+
+
+printTimeElapsedWhenRunningCode {
+    pairWithTargetSumUsingHashTable(input: [1, 2, 3, 4, 6], target: 6)
+}
+
+printTimeElapsedWhenRunningCode {
+    pairWithTargetSumUsingHashTable(input: [2, 5, 9, 11], target: 11)
+}
+
+removeDuplicateSortedArray2(input: [2, 3, 3, 3, 6, 9, 9])
+removeDuplicateSortedArray2(input: [2, 2, 2, 11])
+
+
+
+removeDuplicateSortedArrayGivenKey(input: [3, 2, 3, 6, 3, 10, 9, 3], key: 3)
+
+removeDuplicateSortedArrayGivenKey(input: [2, 11, 2, 2, 1], key: 2)
+
+
+makeSquares(input: [-2, -1, 0, 2, 3])
+
+makeSquaresStartFromZero(input: [-2, -1, 0, 2, 3])
+
+makeSquaresStartFromZero(input: [-5, -4, -2, -1, 0, 2, 3])
+
+
+
+print(searchTriplets(input: [-3, 0, 1, 2, -1, 1, -2]))

@@ -19,4 +19,15 @@ enum PrettyOutput {
             .map { String($0) }
         return (name: String(funcName), params: params)
     }
+    
+    //TODO
+    static func print(solution: String, params: String...) {
+//        +--+--+--+--+--+
+//        |  |  |  |  |  |
+//        +--+--+--+--+--+
+//        |  |  |  |  |  |
+//        +--+--+--+--+--+
+//        |  |  |  |  |  |
+//        +--+--+--+--+--+
+    }
 }
