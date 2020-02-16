@@ -196,3 +196,52 @@ func searchTriplets(input: [Int]) -> [[Int]] {
     }
     return output
 }
+
+func tripletCloseToTarget(input: [Int], target: Int) -> Int {
+    let sorted = input.sorted()
+    var closedResult = Int.max
+    for index in stride(from: 0, to: input.count, by: 1) {
+        let item = sorted[index]
+        //prevents duplicates
+        if index > 0, sorted[index - 1] == sorted[index] {
+            continue
+        }
+        var left = index + 1
+        var right = input.count - 1
+        while left < right {
+            let tempSum = sorted[left] + sorted[right]
+            if tempSum + item == target {
+                closedResult = min(closedResult, item + tempSum)
+                left += 1
+                right -= 1
+                while left < right, sorted[left - 1] == sorted[left] {
+                    left += 1
+                }
+                while left < right, sorted[right + 1] == sorted[right] {
+                    right -= 1
+                }
+            }
+            else if tempSum + item < target {
+                //t: 2  2 vs 3
+                let diff = tripletCloseToTargetDiff(target: target, sum: tempSum + item)
+                if diff < tripletCloseToTargetDiff(target: target, sum: closedResult) {
+                    closedResult = tempSum + item
+                }
+                left += 1
+            }
+            else {
+                let diff = tripletCloseToTargetDiff(target: target, sum: tempSum + item)
+                if diff < tripletCloseToTargetDiff(target: target, sum: closedResult) {
+                    closedResult = tempSum + item
+                }
+                right -= 1
+            }
+        }
+    }
+    print("closedResult: \(closedResult)")
+    return 0
+}
+
+func tripletCloseToTargetDiff(target: Int, sum: Int) -> Int {
+    return abs(target - sum)
+}

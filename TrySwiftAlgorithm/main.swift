@@ -128,3 +128,34 @@ makeSquaresStartFromZero(input: [-5, -4, -2, -1, 0, 2, 3])
 
 
 print(searchTriplets(input: [-3, 0, 1, 2, -1, 1, -2]))
+
+tripletCloseToTarget(input: [-2, 0, 1, 2], target: 2)
+
+tripletCloseToTarget(input: [-3, -1, 1, 2], target: 1)
+tripletCloseToTarget(input: [1, 0, 1, 1], target: 100)
+
+
+let linkedList = LinkedList<Int>()
+
+linkedList.append(element: 1)
+linkedList.append(element: 2)
+linkedList.append(element: 3)
+linkedList.append(element: 4)
+linkedList.append(element: 5)
+linkedList.append(element: 6)
+
+linkedList.printAllKeys()
+
+let head = LLNode<Int>(element: 1)
+head.next = LLNode<Int>(element: 2)
+head.next?.next = LLNode<Int>(element: 3)
+head.next?.next?.next = LLNode<Int>(element: 4)
+head.next?.next?.next?.next = LLNode<Int>(element: 5)
+head.next?.next?.next?.next?.next = LLNode<Int>(element: 6)
+print("has cycle: \(hasCycle(head: head))")
+
+head.next?.next?.next?.next?.next?.next = head.next?.next
+print("has cycle: \(hasCycle(head: head))")
+
+head.next?.next?.next?.next?.next?.next = head.next?.next?.next
+print("has cycle: \(hasCycle(head: head))")
