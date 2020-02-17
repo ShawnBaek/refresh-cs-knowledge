@@ -40,6 +40,58 @@ func hasCycle<T: Comparable>(head: LLNode<T>) -> Bool {
     return hasCycle
 }
 
+func findCycleLength<T: Comparable>(head: LLNode<T>) -> Int {
+    guard head.key != nil else {
+        return 0
+    }
+    var slow: LLNode<T>? = head
+    var fast: LLNode<T>? = head
+    var cycleCount = 0
+    while fast != nil && fast?.next != nil {
+        fast = fast?.next?.next
+        slow = slow?.next
+        if slow === fast {
+            let cycleStart = slow
+            slow = slow?.next
+            cycleCount = 1
+            while cycleStart !== slow {
+                slow = slow?.next
+                cycleCount += 1
+            }
+            break
+        }
+    }
+    return cycleCount
+}
+
+func findCycleStartNode<T: Comparable>(head: LLNode<T>) -> LLNode<T>? {
+    guard head.key != nil else {
+        return nil
+    }
+    var startCycleNode: LLNode<T>? = head
+    var slow: LLNode<T>? = head
+    var fast: LLNode<T>? = head
+    var cycleCount = 0
+    while fast != nil && fast?.next != nil {
+        fast = fast?.next?.next
+        slow = slow?.next
+        if slow === fast {
+            cycleCount = findCycleLength(head: head)
+            var startNode: LLNode<T>? = head
+            while cycleCount > 0 {
+                startCycleNode = startCycleNode?.next
+                cycleCount -= 1
+            }
+            while startNode !== startCycleNode {
+                startNode = startNode?.next
+                startCycleNode = startCycleNode?.next
+            }
+            break
+        }
+    }
+    return startCycleNode
+}
+
 class LinkedList<T: Comparable> {
     private var head = LLNode<T>()
     var count: Int {

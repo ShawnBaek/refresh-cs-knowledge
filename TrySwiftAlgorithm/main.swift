@@ -156,6 +156,17 @@ print("has cycle: \(hasCycle(head: head))")
 
 head.next?.next?.next?.next?.next?.next = head.next?.next
 print("has cycle: \(hasCycle(head: head))")
+print("cycle count: \(findCycleLength(head: head))")
+print("cycle start node: \(findCycleStartNode(head: head)!.key!)")
+
 
 head.next?.next?.next?.next?.next?.next = head.next?.next?.next
 print("has cycle: \(hasCycle(head: head))")
+print("cycle count: \(findCycleLength(head: head))")
+print("cycle start node: \(findCycleStartNode(head: head)!.key!)")
+
+
+head.next?.next?.next?.next?.next?.next = head
+print("has cycle: \(hasCycle(head: head))")
+print("cycle count: \(findCycleLength(head: head))")
+print("cycle start node: \(findCycleStartNode(head: head)!.key!)")
