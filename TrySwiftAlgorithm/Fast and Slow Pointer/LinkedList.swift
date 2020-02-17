@@ -92,6 +92,20 @@ func findCycleStartNode<T: Comparable>(head: LLNode<T>) -> LLNode<T>? {
     return startCycleNode
 }
 
+func middleNode<T: Comparable>(head: LLNode<T>) -> LLNode<T>? {
+    guard head.key != nil else {
+        return nil
+    }
+    var slow: LLNode<T>? = head
+    var fast: LLNode<T>? = head
+    //fast is always twice the nodes ahead of the slow pointer
+    while fast != nil, fast?.next != nil {
+        slow = slow?.next
+        fast = fast?.next?.next
+    }
+    return slow
+}
+
 class LinkedList<T: Comparable> {
     private var head = LLNode<T>()
     var count: Int {

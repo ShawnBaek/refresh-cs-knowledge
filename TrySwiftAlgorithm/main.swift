@@ -152,6 +152,8 @@ head.next?.next = LLNode<Int>(element: 3)
 head.next?.next?.next = LLNode<Int>(element: 4)
 head.next?.next?.next?.next = LLNode<Int>(element: 5)
 head.next?.next?.next?.next?.next = LLNode<Int>(element: 6)
+
+print("middle: \(middleNode(head: head)!.key!)")
 print("has cycle: \(hasCycle(head: head))")
 
 head.next?.next?.next?.next?.next?.next = head.next?.next
@@ -170,3 +172,13 @@ head.next?.next?.next?.next?.next?.next = head
 print("has cycle: \(hasCycle(head: head))")
 print("cycle count: \(findCycleLength(head: head))")
 print("cycle start node: \(findCycleStartNode(head: head)!.key!)")
+
+
+print("find happy number: \(findHappyNumber(input: 23))")
+print("find happy number: \(findHappyNumber(input: 12))")
+print("find happy number: \(findHappyNumber(input: 10))")
+
+
+print("merged intervals: \(mergeInterval(intervals: [[6, 7], [2, 4], [5, 9]]))")
+
+print("merged intervals: \(mergeInterval(intervals: [[1, 4], [2, 6], [3, 5]]))")

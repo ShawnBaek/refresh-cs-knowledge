@@ -15,6 +15,8 @@
 		7F6B2C0423E59D5600F1F015 /* PrettyOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2C0323E59D5600F1F015 /* PrettyOutput.swift */; };
 		7FB1F18E23F1596C00B79266 /* TwoPointers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F18D23F1596C00B79266 /* TwoPointers.swift */; };
 		7FB1F19323F9783D00B79266 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19223F9783D00B79266 /* LinkedList.swift */; };
+		7FB1F19523FA709300B79266 /* FindHappyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19423FA709300B79266 /* FindHappyNumber.swift */; };
+		7FB1F19823FAAD4C00B79266 /* MergeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19723FAAD4C00B79266 /* MergeIntervals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +41,8 @@
 		7F6B2C0323E59D5600F1F015 /* PrettyOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyOutput.swift; sourceTree = "<group>"; };
 		7FB1F18D23F1596C00B79266 /* TwoPointers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPointers.swift; sourceTree = "<group>"; };
 		7FB1F19223F9783D00B79266 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
+		7FB1F19423FA709300B79266 /* FindHappyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindHappyNumber.swift; sourceTree = "<group>"; };
+		7FB1F19723FAAD4C00B79266 /* MergeIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeIntervals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		7F2F84F32348278F00F430AE /* TrySwiftAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				7FB1F19623FA7F8500B79266 /* Merge Intervals */,
 				7FB1F19123F9782700B79266 /* Fast and Slow Pointer */,
 				7F6B2BFD23DF389E00F1F015 /* Utils */,
 				7F2F84FD2349FF2000F430AE /* SlidingWindow */,
@@ -119,8 +124,17 @@
 			isa = PBXGroup;
 			children = (
 				7FB1F19223F9783D00B79266 /* LinkedList.swift */,
+				7FB1F19423FA709300B79266 /* FindHappyNumber.swift */,
 			);
 			path = "Fast and Slow Pointer";
+			sourceTree = "<group>";
+		};
+		7FB1F19623FA7F8500B79266 /* Merge Intervals */ = {
+			isa = PBXGroup;
+			children = (
+				7FB1F19723FAAD4C00B79266 /* MergeIntervals.swift */,
+			);
+			path = "Merge Intervals";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6B2C0123DF38CB00F1F015 /* Fibonacci.swift in Sources */,
+				7FB1F19823FAAD4C00B79266 /* MergeIntervals.swift in Sources */,
 				7F2AF31023E734EE001F3366 /* longestSubArray.swift in Sources */,
 				7F6B2C0223DF38CB00F1F015 /* 01Knapsack.swift in Sources */,
 				7FB1F18E23F1596C00B79266 /* TwoPointers.swift in Sources */,
@@ -189,6 +204,7 @@
 				7F2F84FC2349FE2100F430AE /* findSubArray.swift in Sources */,
 				7FB1F19323F9783D00B79266 /* LinkedList.swift in Sources */,
 				7F2F84F52348278F00F430AE /* main.swift in Sources */,
+				7FB1F19523FA709300B79266 /* FindHappyNumber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
