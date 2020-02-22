@@ -244,3 +244,35 @@ while reversedEveryElement != nil {
     print("reversedEveryElement sublist: \(reversedEveryElement?.key)")
     reversedEveryElement = reversedEveryElement?.next
 }
+
+//BFS
+var root = TreeNode<Int>(key: 12)
+root.left = TreeNode<Int>(key: 7)
+root.right = TreeNode<Int>(key: 1)
+root.left?.left = TreeNode<Int>(key: 9)
+root.right?.left = TreeNode<Int>(key: 10)
+root.right?.right = TreeNode<Int>(key: 5)
+
+//or traverseBFS
+if let resultBFS = traverseBFSLowesetFirst(root: root) {
+    print("traverse BFSLowesetFirst: \(resultBFS)")
+}
+
+
+if let resultBFS = traverseBFS(root: root) {
+    print("BFS: \(resultBFS)")
+}
+
+var zigzagRoot = TreeNode<Int>(key: 12)
+zigzagRoot.left = TreeNode<Int>(key: 7)
+zigzagRoot.right = TreeNode<Int>(key: 1)
+zigzagRoot.left?.left = TreeNode<Int>(key: 9)
+zigzagRoot.right?.left = TreeNode<Int>(key: 10)
+zigzagRoot.right?.right = TreeNode<Int>(key: 5)
+zigzagRoot.right?.left?.left = TreeNode<Int>(key: 20)
+zigzagRoot.right?.left?.right = TreeNode<Int>(key: 17)
+
+if let resultBFS = traverseZigzag(root: zigzagRoot) {
+    //12, [1, 7], [9, 10, 5], [17, 20]
+    print("zigzag BFS: \(resultBFS)")
+}
