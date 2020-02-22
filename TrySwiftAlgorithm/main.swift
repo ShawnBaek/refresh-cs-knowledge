@@ -230,3 +230,17 @@ while reverseSubListHead != nil {
     print("reverse sublist: \(reverseSubListHead?.key)")
     reverseSubListHead = reverseSubListHead?.next
 }
+
+var reverseKElement = Node<Int>(key: 1)
+reverseKElement.next = Node<Int>(key: 2)
+reverseKElement.next?.next = Node<Int>(key: 3)
+reverseKElement.next?.next?.next = Node<Int>(key: 4)
+reverseKElement.next?.next?.next?.next = Node<Int>(key: 5)
+reverseKElement.next?.next?.next?.next?.next = Node<Int>(key: 6)
+reverseKElement.next?.next?.next?.next?.next?.next = Node<Int>(key: 7)
+reverseKElement.next?.next?.next?.next?.next?.next?.next = Node<Int>(key: 8)
+var reversedEveryElement = reverseEveryKElement(head: reverseKElement, k: 3)
+while reversedEveryElement != nil {
+    print("reversedEveryElement sublist: \(reversedEveryElement?.key)")
+    reversedEveryElement = reversedEveryElement?.next
+}

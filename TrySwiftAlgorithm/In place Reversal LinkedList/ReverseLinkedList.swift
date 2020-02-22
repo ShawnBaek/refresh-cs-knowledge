@@ -88,3 +88,38 @@ func reverseSubList<T>(head: Node<T>, p: Int, q: Int) -> Node<T>? {
     
     return sublist
 }
+
+func reverseEveryKElement<T>(head: Node<T>, k: Int) -> Node<T>? {
+    var newList: Node<T>? = head
+    var current: Node<T>? = head
+    var previous: Node<T>? = nil
+    while true {
+        var count = 0
+        let lastNodeOfPrevious: Node<T>? = previous
+        let lastOfSubList: Node<T>? = current
+        var next: Node<T>? = nil
+        while current != nil, count < k {
+            next = current?.next
+            current?.next = previous
+            //reversed linked list
+            previous = current
+            current = next
+            count += 1
+        }
+        
+        if lastNodeOfPrevious != nil {
+            lastNodeOfPrevious?.next = previous
+        }
+        else {
+            //update new list
+            newList = previous
+        }
+        //head -> next = start of next linked list
+        lastOfSubList?.next = current
+        if current == nil {
+            break
+        }
+        previous = lastOfSubList
+    }
+    return newList
+}
