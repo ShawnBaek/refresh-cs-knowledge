@@ -217,3 +217,16 @@ while reverseHead != nil {
     print("reverse: \(reverseHead?.key)")
     reverseHead = reverseHead?.next
 }
+
+var sublistTest = Node<Int>(key: 1)
+sublistTest.next = Node<Int>(key: 2)
+sublistTest.next?.next = Node<Int>(key: 3)
+sublistTest.next?.next?.next = Node<Int>(key: 4)
+sublistTest.next?.next?.next?.next = Node<Int>(key: 5)
+
+var reverseSubListHead = reverseSubList(head: sublistTest, p: 2, q: 4)
+
+while reverseSubListHead != nil {
+    print("reverse sublist: \(reverseSubListHead?.key)")
+    reverseSubListHead = reverseSubListHead?.next
+}

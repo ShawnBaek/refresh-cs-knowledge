@@ -30,3 +30,61 @@ func reverseLinkedList<T>(head: Node<T>) -> Node<T>? {
     }
     return previous
 }
+
+func reverseSubList<T>(head: Node<T>, start: Int, end: Int) -> Node<T>? {
+    var sublist: Node<T>? = nil
+    var current: Node<T>? = head
+    var next: Node<T>? = nil
+    var count = 0
+    while current != nil, count <= end  {
+        next = current?.next
+        if count >= start {
+            current?.next = sublist
+            sublist = current
+        }
+        current = next
+        count += 1
+    }
+    return sublist
+}
+
+func reverseSubList<T>(head: Node<T>, p: Int, q: Int) -> Node<T>? {
+    if p == q {
+        return head
+    }
+    var sublist: Node<T>? = head
+    var previous: Node<T>? = nil
+    var current: Node<T>? = head
+    var count = 0
+    while current != nil, count < p - 1 {
+        previous = current
+        current = current?.next
+        count += 1
+    }
+    count = 0
+    //previous: node at p - 1
+    let lastNodeOfFirstPart = previous
+    let lastNodeOfSublist = current
+    var next: Node<T>? = nil
+    previous?.next = nil
+    
+    //loop length of sublist between p and q
+    while current != nil, count < q - p + 1 {
+        next = current?.next
+        current?.next = previous
+        previous = current
+        //reset next position of current node
+        current = next
+        count += 1
+    }
+    //node at p - 1
+    if lastNodeOfFirstPart != nil {
+        lastNodeOfFirstPart?.next = previous
+    }
+    else {
+        sublist = previous
+    }
+    lastNodeOfSublist?.next = current
+    
+    return sublist
+}
