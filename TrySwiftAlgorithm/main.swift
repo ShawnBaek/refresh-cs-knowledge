@@ -182,3 +182,38 @@ print("find happy number: \(findHappyNumber(input: 10))")
 print("merged intervals: \(mergeInterval(intervals: [[6, 7], [2, 4], [5, 9]]))")
 
 print("merged intervals: \(mergeInterval(intervals: [[1, 4], [2, 6], [3, 5]]))")
+
+
+print("merged intervals: \(mergeInterval(intervals: [[1, 3], [5, 7], [8, 12]], new: [4, 6]))")
+print("merged intervals: \(mergeInterval(intervals: [[1, 3], [5, 7], [8, 12]], new: [4, 10]))")
+print("merged intervals: \(mergeInterval(intervals: [[2, 3], [5, 7]], new: [1, 4]))")
+
+
+print("intersaction intervals: \(intersectionInterval(arr1: [[1, 3], [5, 6], [7, 9], [2, 3]], arr2: [[2, 3], [5, 7]]))")
+
+print("appointment: \(conflicting(appointment: [[1, 4], [2, 5], [7, 9]]))")
+
+print("appointment: \(conflicting(appointment: [[6, 7], [2, 4], [8, 12]]))")
+print("appointment: \(conflicting(appointment: [[4, 5], [2, 3], [3, 6]]))")
+
+
+var cyclicSortInput1 = [3, 1, 5, 4, 2]
+var cyclicSortInput2 = [2, 6, 4, 3, 1, 5]
+var cyclicSortInput3 = [1, 5, 6, 4, 3, 2]
+print("Cyclic Sort: \(cyclicSort(input: &cyclicSortInput1))")
+print("Cyclic Sort: \(cyclicSort(input: &cyclicSortInput2))")
+print("Cyclic Sort: \(cyclicSort(input: &cyclicSortInput3))")
+
+
+var linkedHead = Node<Int>(key: 0)
+linkedHead.next = Node<Int>(key: 1)
+linkedHead.next?.next = Node<Int>(key: 2)
+linkedHead.next?.next?.next = Node<Int>(key: 3)
+linkedHead.next?.next?.next?.next = Node<Int>(key: 4)
+
+var reverseHead = reverseLinkedList(head: linkedHead)
+
+while reverseHead != nil {
+    print("reverse: \(reverseHead?.key)")
+    reverseHead = reverseHead?.next
+}

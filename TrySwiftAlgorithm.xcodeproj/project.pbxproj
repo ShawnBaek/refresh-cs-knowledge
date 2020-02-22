@@ -17,6 +17,8 @@
 		7FB1F19323F9783D00B79266 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19223F9783D00B79266 /* LinkedList.swift */; };
 		7FB1F19523FA709300B79266 /* FindHappyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19423FA709300B79266 /* FindHappyNumber.swift */; };
 		7FB1F19823FAAD4C00B79266 /* MergeIntervals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19723FAAD4C00B79266 /* MergeIntervals.swift */; };
+		7FB1F19A23FC26E200B79266 /* CyclicSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19923FC26E200B79266 /* CyclicSort.swift */; };
+		7FB1F19F23FC339400B79266 /* ReverseLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19E23FC339400B79266 /* ReverseLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +45,8 @@
 		7FB1F19223F9783D00B79266 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		7FB1F19423FA709300B79266 /* FindHappyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindHappyNumber.swift; sourceTree = "<group>"; };
 		7FB1F19723FAAD4C00B79266 /* MergeIntervals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeIntervals.swift; sourceTree = "<group>"; };
+		7FB1F19923FC26E200B79266 /* CyclicSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclicSort.swift; sourceTree = "<group>"; };
+		7FB1F19E23FC339400B79266 /* ReverseLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 		7F2F84F32348278F00F430AE /* TrySwiftAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				7FB1F19D23FC335600B79266 /* In place Reversal LinkedList */,
+				7FB1F19C23FC26EF00B79266 /* Cyclic Sort */,
 				7FB1F19623FA7F8500B79266 /* Merge Intervals */,
 				7FB1F19123F9782700B79266 /* Fast and Slow Pointer */,
 				7F6B2BFD23DF389E00F1F015 /* Utils */,
@@ -137,6 +143,22 @@
 			path = "Merge Intervals";
 			sourceTree = "<group>";
 		};
+		7FB1F19C23FC26EF00B79266 /* Cyclic Sort */ = {
+			isa = PBXGroup;
+			children = (
+				7FB1F19923FC26E200B79266 /* CyclicSort.swift */,
+			);
+			path = "Cyclic Sort";
+			sourceTree = "<group>";
+		};
+		7FB1F19D23FC335600B79266 /* In place Reversal LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				7FB1F19E23FC339400B79266 /* ReverseLinkedList.swift */,
+			);
+			path = "In place Reversal LinkedList";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F6B2C0123DF38CB00F1F015 /* Fibonacci.swift in Sources */,
+				7FB1F19A23FC26E200B79266 /* CyclicSort.swift in Sources */,
 				7FB1F19823FAAD4C00B79266 /* MergeIntervals.swift in Sources */,
 				7F2AF31023E734EE001F3366 /* longestSubArray.swift in Sources */,
 				7F6B2C0223DF38CB00F1F015 /* 01Knapsack.swift in Sources */,
@@ -203,6 +226,7 @@
 				7F6B2C0423E59D5600F1F015 /* PrettyOutput.swift in Sources */,
 				7F2F84FC2349FE2100F430AE /* findSubArray.swift in Sources */,
 				7FB1F19323F9783D00B79266 /* LinkedList.swift in Sources */,
+				7FB1F19F23FC339400B79266 /* ReverseLinkedList.swift in Sources */,
 				7F2F84F52348278F00F430AE /* main.swift in Sources */,
 				7FB1F19523FA709300B79266 /* FindHappyNumber.swift in Sources */,
 			);
