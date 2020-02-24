@@ -323,7 +323,7 @@ print("Median of Stream: \(medianOfTwoHeap.findMedian())")
 
 
 
-let heap = Heap(capacity: 10)
+let heap = Heap(capacity: 10, type: .maxHeap)
 
 heap.insert(input: 11)
 heap.insert(input: 17)
@@ -336,3 +336,19 @@ heap.insert(input: 8)
 
 print("Heapify!")
 heap.printAllNodes()
+
+
+heap.removeHighestPriority()
+heap.printAllNodes()
+
+
+let slidingWindowMedians = SlidingWindowMedian()
+//slidingWindowMedians.findSlidingWindowMedian(numbers: [1, 2, -1, 3, 5], k: 2)
+//
+//print("findSliding Median: \(slidingWindowMedians.result)")
+
+
+
+slidingWindowMedians.findSlidingWindowMedian(numbers: [1, 2, -1, 3, 5], k: 3)
+
+print("findSliding Median: \(slidingWindowMedians.result)")
