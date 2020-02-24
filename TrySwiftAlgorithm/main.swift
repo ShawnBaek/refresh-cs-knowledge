@@ -296,3 +296,12 @@ findAllPathRoot.right?.left = TreeNode<Int>(key: 10)
 findAllPathRoot.right?.right = TreeNode<Int>(key: 5)
 
 print("find all path: \(findAllPath(root: findAllPathRoot, sum: 23))")
+
+
+var sumOfPathRoot = TreeNode<Int>(key: 1)
+sumOfPathRoot.left = TreeNode<Int>(key: 0)
+sumOfPathRoot.right = TreeNode<Int>(key: 1)
+sumOfPathRoot.left?.left = TreeNode<Int>(key: 1)
+sumOfPathRoot.right?.left = TreeNode<Int>(key: 6)
+sumOfPathRoot.right?.right = TreeNode<Int>(key: 5)
+print("sum of current path: \(sumOfPathNumber2(root: sumOfPathRoot))")

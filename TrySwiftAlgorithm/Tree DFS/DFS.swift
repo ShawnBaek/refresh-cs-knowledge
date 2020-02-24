@@ -34,7 +34,6 @@ func findAllPath<T>(root: TreeNode<T>?, sum: Int) -> [[Int]]? {
     return allPath
 }
 
-@discardableResult
 func findPathes<T>(
     root: TreeNode<T>?,
     sum: Int,
@@ -45,6 +44,7 @@ func findPathes<T>(
         return
     }
     currentPath.append(rootValue)
+    //check leaf node
     if rootValue == sum, root?.left == nil, root?.right == nil {
         allPath.append(currentPath)
     }
@@ -54,3 +54,57 @@ func findPathes<T>(
     }
     _ = currentPath.popLast()
 }
+
+func sumOfPathNumber<T>(root: TreeNode<T>?) -> Int {
+    var sumOfCurrentPath: [Int] = [Int]()
+    var totalSum: Int = 0
+    recursiveSumOfPathNumber(root: root, sumOfCurrentPath: &sumOfCurrentPath, totalNumber: &totalSum)
+    return totalSum
+}
+
+func recursiveSumOfPathNumber<T>(root: TreeNode<T>?, sumOfCurrentPath: inout [Int], totalNumber: inout Int) {
+    guard root != nil, let rootValue = root?.value as? Int else {
+        return
+    }
+    sumOfCurrentPath.append(rootValue)
+    //leaf node
+    if root?.left == nil, root?.right == nil {
+        var sum = 0
+        for (index, value) in sumOfCurrentPath.enumerated() {
+            let base = sumOfCurrentPath.count - index - 1
+            let number = Int(pow(Double(10), Double(base))) * value
+            sum += number
+        }
+        totalNumber += sum
+    }
+    else {
+        if let leftChild = root?.left {
+            recursiveSumOfPathNumber(root: leftChild, sumOfCurrentPath: &sumOfCurrentPath, totalNumber: &totalNumber)
+        }
+        if let rightChild = root?.right {
+            recursiveSumOfPathNumber(root: rightChild, sumOfCurrentPath: &sumOfCurrentPath, totalNumber: &totalNumber)
+        }
+    }
+    //Finish Current Path
+    //Pop Left Node
+    let _ = sumOfCurrentPath.popLast()
+}
+
+
+func sumOfPathNumber2<T>(root: TreeNode<T>?) -> Int {
+    return recursiveSumOfPathNumber2(root: root, totalNumber: 0)
+}
+
+func recursiveSumOfPathNumber2<T>(root: TreeNode<T>?, totalNumber: Int) -> Int {
+    guard root != nil, let rootValue = root?.value as? Int else {
+        return 0
+    }
+    let pathSum = totalNumber * 10 + rootValue
+    //left node
+    if root?.left == nil, root?.right == nil {
+        return pathSum
+    }
+    return recursiveSumOfPathNumber2(root: root?.left, totalNumber: pathSum) +
+        recursiveSumOfPathNumber2(root: root?.right, totalNumber: pathSum)
+}
+
