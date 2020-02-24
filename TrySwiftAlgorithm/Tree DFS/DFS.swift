@@ -108,3 +108,26 @@ func recursiveSumOfPathNumber2<T>(root: TreeNode<T>?, totalNumber: Int) -> Int {
         recursiveSumOfPathNumber2(root: root?.right, totalNumber: pathSum)
 }
 
+//[1, 7, 9]
+func findGivenPath<T>(root: TreeNode<T>?, given path: [Int]) -> Bool {
+    return recursiveFindGivenPath(root: root, given: path, index: 0)
+}
+
+func recursiveFindGivenPath<T>(root: TreeNode<T>?, given path: [Int], index: Int) -> Bool {
+    guard root != nil, let rootValue = root?.value as? Int else {
+        return false
+    }
+    guard index < path.count else {
+        return false
+    }
+    if rootValue != path[index] {
+        return false
+    }
+    //Leaf Node is equal to given path..
+    if root?.left == nil, root?.right == nil, index == path.count - 1 {
+        return true
+    }
+    let leftChildResult = recursiveFindGivenPath(root: root?.left, given: path, index: index + 1)
+    let rightChildResult = recursiveFindGivenPath(root: root?.right, given: path, index: index + 1)
+    return leftChildResult || rightChildResult
+}

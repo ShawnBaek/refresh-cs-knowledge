@@ -305,3 +305,8 @@ sumOfPathRoot.left?.left = TreeNode<Int>(key: 1)
 sumOfPathRoot.right?.left = TreeNode<Int>(key: 6)
 sumOfPathRoot.right?.right = TreeNode<Int>(key: 5)
 print("sum of current path: \(sumOfPathNumber2(root: sumOfPathRoot))")
+
+
+
+print("has given path: \(findGivenPath(root: sumOfPathRoot, given: [1, 0, 7]))") //false
+print("has given path: \(findGivenPath(root: sumOfPathRoot, given: [1, 1, 6]))") //true
