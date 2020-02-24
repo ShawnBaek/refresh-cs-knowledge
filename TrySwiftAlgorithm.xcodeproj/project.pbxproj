@@ -21,6 +21,7 @@
 		7FB1F19F23FC339400B79266 /* ReverseLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19E23FC339400B79266 /* ReverseLinkedList.swift */; };
 		7FB1F1A22401528400B79266 /* BFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F1A12401528300B79266 /* BFS.swift */; };
 		7FF23A662402BB6400679400 /* DFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF23A652402BB6400679400 /* DFS.swift */; };
+		7FF23A692403BBB300679400 /* TwoHeaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF23A682403BBB300679400 /* TwoHeaps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		7FB1F19E23FC339400B79266 /* ReverseLinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseLinkedList.swift; sourceTree = "<group>"; };
 		7FB1F1A12401528300B79266 /* BFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BFS.swift; sourceTree = "<group>"; };
 		7FF23A652402BB6400679400 /* DFS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DFS.swift; sourceTree = "<group>"; };
+		7FF23A682403BBB300679400 /* TwoHeaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoHeaps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		7F2F84F32348278F00F430AE /* TrySwiftAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				7FF23A672403BB9E00679400 /* Two Heaps */,
 				7FF23A642402BB4600679400 /* Tree DFS */,
 				7FB1F1A02401527300B79266 /* Tree BFS */,
 				7FB1F19D23FC335600B79266 /* In place Reversal LinkedList */,
@@ -181,6 +184,14 @@
 			path = "Tree DFS";
 			sourceTree = "<group>";
 		};
+		7FF23A672403BB9E00679400 /* Two Heaps */ = {
+			isa = PBXGroup;
+			children = (
+				7FF23A682403BBB300679400 /* TwoHeaps.swift */,
+			);
+			path = "Two Heaps";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -253,6 +264,7 @@
 				7FB1F19F23FC339400B79266 /* ReverseLinkedList.swift in Sources */,
 				7F2F84F52348278F00F430AE /* main.swift in Sources */,
 				7FB1F19523FA709300B79266 /* FindHappyNumber.swift in Sources */,
+				7FF23A692403BBB300679400 /* TwoHeaps.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

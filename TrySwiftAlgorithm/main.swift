@@ -310,3 +310,13 @@ print("sum of current path: \(sumOfPathNumber2(root: sumOfPathRoot))")
 
 print("has given path: \(findGivenPath(root: sumOfPathRoot, given: [1, 0, 7]))") //false
 print("has given path: \(findGivenPath(root: sumOfPathRoot, given: [1, 1, 6]))") //true
+
+//Two Heaps
+let medianOfTwoHeap = MedianOfStream()
+medianOfTwoHeap.insertNumber(input: 3)
+medianOfTwoHeap.insertNumber(input: 1)
+print("Median of Stream: \(medianOfTwoHeap.findMedian())")
+medianOfTwoHeap.insertNumber(input: 5)
+print("Median of Stream: \(medianOfTwoHeap.findMedian())")
+medianOfTwoHeap.insertNumber(input: 4)
+print("Median of Stream: \(medianOfTwoHeap.findMedian())")
