@@ -276,3 +276,23 @@ if let resultBFS = traverseZigzag(root: zigzagRoot) {
     //12, [1, 7], [9, 10, 5], [17, 20]
     print("zigzag BFS: \(resultBFS)")
 }
+
+var hasPathRoot = TreeNode<Int>(key: 12)
+hasPathRoot.left = TreeNode<Int>(key: 7)
+hasPathRoot.right = TreeNode<Int>(key: 1)
+hasPathRoot.left?.left = TreeNode<Int>(key: 9)
+hasPathRoot.right?.left = TreeNode<Int>(key: 10)
+hasPathRoot.right?.right = TreeNode<Int>(key: 5)
+
+print("has path: \(hasPath(root: hasPathRoot, sum: 23))")
+print("has path: \(hasPath(root: hasPathRoot, sum: 16))")
+
+
+var findAllPathRoot = TreeNode<Int>(key: 12)
+findAllPathRoot.left = TreeNode<Int>(key: 7)
+findAllPathRoot.right = TreeNode<Int>(key: 1)
+findAllPathRoot.left?.left = TreeNode<Int>(key: 4)
+findAllPathRoot.right?.left = TreeNode<Int>(key: 10)
+findAllPathRoot.right?.right = TreeNode<Int>(key: 5)
+
+print("find all path: \(findAllPath(root: findAllPathRoot, sum: 23))")

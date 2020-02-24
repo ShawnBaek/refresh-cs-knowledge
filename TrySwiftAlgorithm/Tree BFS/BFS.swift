@@ -94,7 +94,6 @@ func traverseZigzag<T>(root: TreeNode<T>) -> [[T]]? {
         level += 1
         result.append(levelItems)
     }
-    
     return result
 }
 
