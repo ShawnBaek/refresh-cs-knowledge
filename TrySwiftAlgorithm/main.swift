@@ -320,3 +320,19 @@ medianOfTwoHeap.insertNumber(input: 5)
 print("Median of Stream: \(medianOfTwoHeap.findMedian())")
 medianOfTwoHeap.insertNumber(input: 4)
 print("Median of Stream: \(medianOfTwoHeap.findMedian())")
+
+
+
+let heap = Heap(capacity: 10)
+
+heap.insert(input: 11)
+heap.insert(input: 17)
+heap.insert(input: 15)
+heap.insert(input: 2)
+heap.insert(input: 4)
+heap.insert(input: 7)
+heap.insert(input: 6)
+heap.insert(input: 8)
+
+print("Heapify!")
+heap.printAllNodes()
