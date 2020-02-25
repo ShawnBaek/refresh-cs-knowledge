@@ -13,6 +13,7 @@
 		7F6B2C0123DF38CB00F1F015 /* Fibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2BFF23DF38CB00F1F015 /* Fibonacci.swift */; };
 		7F6B2C0223DF38CB00F1F015 /* 01Knapsack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2C0023DF38CB00F1F015 /* 01Knapsack.swift */; };
 		7F6B2C0423E59D5600F1F015 /* PrettyOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6B2C0323E59D5600F1F015 /* PrettyOutput.swift */; };
+		7F9CD40B2404C101000ABC35 /* Graph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9CD40A2404C101000ABC35 /* Graph.swift */; };
 		7FB1F18E23F1596C00B79266 /* TwoPointers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F18D23F1596C00B79266 /* TwoPointers.swift */; };
 		7FB1F19323F9783D00B79266 /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19223F9783D00B79266 /* LinkedList.swift */; };
 		7FB1F19523FA709300B79266 /* FindHappyNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB1F19423FA709300B79266 /* FindHappyNumber.swift */; };
@@ -44,6 +45,7 @@
 		7F6B2BFF23DF38CB00F1F015 /* Fibonacci.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fibonacci.swift; sourceTree = "<group>"; };
 		7F6B2C0023DF38CB00F1F015 /* 01Knapsack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = 01Knapsack.swift; sourceTree = "<group>"; };
 		7F6B2C0323E59D5600F1F015 /* PrettyOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrettyOutput.swift; sourceTree = "<group>"; };
+		7F9CD40A2404C101000ABC35 /* Graph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Graph.swift; sourceTree = "<group>"; };
 		7FB1F18D23F1596C00B79266 /* TwoPointers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPointers.swift; sourceTree = "<group>"; };
 		7FB1F19223F9783D00B79266 /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		7FB1F19423FA709300B79266 /* FindHappyNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindHappyNumber.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		7F2F84F32348278F00F430AE /* TrySwiftAlgorithm */ = {
 			isa = PBXGroup;
 			children = (
+				7F9CD4092404C0EF000ABC35 /* Topological Sort */,
 				7FF23A672403BB9E00679400 /* Two Heaps */,
 				7FF23A642402BB4600679400 /* Tree DFS */,
 				7FB1F1A02401527300B79266 /* Tree BFS */,
@@ -125,6 +128,14 @@
 				7F6B2C0023DF38CB00F1F015 /* 01Knapsack.swift */,
 			);
 			path = DP;
+			sourceTree = "<group>";
+		};
+		7F9CD4092404C0EF000ABC35 /* Topological Sort */ = {
+			isa = PBXGroup;
+			children = (
+				7F9CD40A2404C101000ABC35 /* Graph.swift */,
+			);
+			path = "Topological Sort";
 			sourceTree = "<group>";
 		};
 		7FB1F18C23F1590A00B79266 /* Two Pointers */ = {
@@ -258,6 +269,7 @@
 				7FF23A662402BB6400679400 /* DFS.swift in Sources */,
 				7FB1F18E23F1596C00B79266 /* TwoPointers.swift in Sources */,
 				7F6B2C0423E59D5600F1F015 /* PrettyOutput.swift in Sources */,
+				7F9CD40B2404C101000ABC35 /* Graph.swift in Sources */,
 				7FB1F1A22401528400B79266 /* BFS.swift in Sources */,
 				7F2F84FC2349FE2100F430AE /* findSubArray.swift in Sources */,
 				7FB1F19323F9783D00B79266 /* LinkedList.swift in Sources */,

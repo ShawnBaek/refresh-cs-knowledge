@@ -352,3 +352,18 @@ let slidingWindowMedians = SlidingWindowMedian()
 slidingWindowMedians.findSlidingWindowMedian(numbers: [1, 2, -1, 3, 5], k: 3)
 
 print("findSliding Median: \(slidingWindowMedians.result)")
+
+
+//Topological Sort
+let topologicalResult1 = topologicalSort(
+    vertice: 4,
+    edges: [
+        [3, 2],
+        [3, 0],
+        [2, 0],
+        [2, 1]
+    ]
+)
+
+print("Topological Result: \(topologicalResult1)")
+
