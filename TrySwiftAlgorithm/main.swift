@@ -367,3 +367,25 @@ let topologicalResult1 = topologicalSort(
 
 print("Topological Result: \(topologicalResult1)")
 
+let isPossibleScheduling = isSchedulingPossible(
+    tasks: 6,
+    prerequisites: [
+        [0, 4],
+        [1, 4],
+        [3, 2],
+        [1, 3]]
+)
+
+print("Is Possible Scheduling: \(isPossibleScheduling)")
+
+
+//Subsets
+
+print("## Find Subsets ##")
+print("subsets: \(findSubsets(input: [1, 3]))")
+print("subsets: \(findSubsets(input: [1, 5, 3]))")
+print("subsets with duplicated: \(findSubsetsRemoveDuplicates(input: [1, 5, 3, 3]))")
+
+
+
+print("permutation with duplicated: \(permutations(input: [1, 3, 5]))")
